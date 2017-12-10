@@ -1,0 +1,8 @@
+# // javascript.hxml
+-lib js-kit
+-lib hxnodejs
+-cp src
+-main Server
+-js bin/server.js
+-dce full
+-cmd cp -R public bin/public
