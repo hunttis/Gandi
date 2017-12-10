@@ -4,8 +4,8 @@ if (process.version < "v4.0.0") console.warn("Module " + (typeof(module) == "und
 Math.__name__ = true;
 var Server = function() {
 	var app = new js_npm_Express();
-	app.set("port",3000);
 	app["use"](new js_npm_express_Favicon(__dirname + "/public/favicon.ico"));
+	app.set("port",process.env.PORT || 3000);
 	var tmp = js_npm_express_BodyParser.urlencoded();
 	app["use"](tmp);
 	var tmp1 = js_node_Path.join(__dirname,"public");

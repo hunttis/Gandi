@@ -5,5 +5,5 @@
 -main Server
 -js bin/server.js
 -dce full
--cmd cp -R public bin/public
+-cmd cp -R ./public/ ./bin/public/
 -cmd npm start

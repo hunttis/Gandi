@@ -9,8 +9,9 @@ class Server {
   function new() {
     var app : Express = new Express();
 
-    app.set('port', 3000);
     app.use(new Favicon(Node.__dirname + '/public/favicon.ico'));
+    app.set('port', untyped(js.Node.process.env.PORT || 3000) );
+    
     // there is no Logger class in js-kit, so I added it in this source folder (js/npm/express/Logger.hx)
     // app.use(new Logger('dev')); 
     app.use(BodyParser.urlencoded());
