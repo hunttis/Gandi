@@ -1,0 +1,4 @@
+language: haxe
+hxml:
+  - compile.hxml
+  
